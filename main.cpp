@@ -23,12 +23,13 @@ int main(int argc, char* argv[])
             //Red
             colorim.at<cv::Vec3b>(i,j) = pixel;
         }
+    cv::Mat M(3,2, CV_8UC3, cv::Scalar(0,0,255));
     //显示结果
     cv::imshow("grayim", grayim);
     cv::imshow("colorim", colorim);
     cv::waitKey(0);
 
-    cv::Mat M(3,2, CV_8UC3, cv::Scalar(0,0,255));
+
     std::cout << "M = " << std::endl << " " << M << std::endl;
     return 0;
 }
